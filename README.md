@@ -103,7 +103,7 @@ This is a simple Photoshop-like web application with layered image editing featu
 
 ## Future Improvements
 
-- Add support for more shapes (rectangle, polygons, text)
+- Add support for more shapes (text)
 - Implement layer visibility toggling and reordering
 - Add user authentication and project management
 - Support exporting final images
