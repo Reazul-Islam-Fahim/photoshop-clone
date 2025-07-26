@@ -1,4 +1,3 @@
-
 from rest_framework import serializers
 from .models import Project, Image, Layer
 
@@ -20,7 +19,7 @@ class ImageUploadSerializer(serializers.ModelSerializer):
         fields = ['project', 'title', 'image_file']
 
 class ProjectSerializer(serializers.ModelSerializer):
-    image = ImageSerializer(read_only=True)
+    images = ImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
