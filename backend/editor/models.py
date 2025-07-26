@@ -7,7 +7,7 @@ class Project(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Image(models.Model):
-    project = models.OneToOneField(Project, on_delete=models.CASCADE, related_name='image')
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='images') 
     title = models.CharField(max_length=100)
     image_file = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(auto_now_add=True)
